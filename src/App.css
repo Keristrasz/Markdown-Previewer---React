@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  vertical-align: center;
+  background-color: lightblue;
+}
+
+main {
+  margin: 15px;
+}
+
+#content {
+  text-align: left
+}
