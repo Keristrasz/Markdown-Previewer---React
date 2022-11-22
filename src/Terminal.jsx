@@ -8,7 +8,7 @@ export default function Terminal({ terminalContent, setTerminalContent }) {
   return (
     <main>
       <div>
-        <h3>Terminal</h3>
+        <h3>Text editor</h3>
         <hr />
         <textarea
           className="form-control"
