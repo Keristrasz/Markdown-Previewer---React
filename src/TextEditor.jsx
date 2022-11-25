@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 
-export default function Terminal({ terminalContent, setTerminalContent }) {
+export default function TextEditor({ textEditorContent, setTextEditorContent }) {
   function changeText(e) {
-    setTerminalContent(e.target.value);
+    setTextEditorContent(e.target.value);
   }
   return (
     <main>
@@ -13,7 +13,7 @@ export default function Terminal({ terminalContent, setTerminalContent }) {
         <textarea
           className="form-control"
           rows="33"
-          value={terminalContent}
+          value={textEditorContent}
           onChange={changeText}
         ></textarea>
       </div>

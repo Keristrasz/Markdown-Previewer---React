@@ -1,18 +1,19 @@
 import React from "react";
 import "./App.css";
-import Terminal from "./Terminal.jsx";
 
-export default function ContentOfPreviewer({ terminalContent }) {
+export default function ContentOfPreviewer({ textEditorContent }) {
+  
   function myGreeting() {
     document.getElementById("content").innerHTML =
-      marked.parse(terminalContent);
+      marked.parse(textEditorContent);
+      console.log("render")
   }
   const myTimeout = setTimeout(myGreeting, 100);
 
   return (
     <div>
       <div id="content">
-        {marked.parse(terminalContent)}
+        {marked.parse(textEditorContent)}
         {myTimeout}
       </div>
     </div>

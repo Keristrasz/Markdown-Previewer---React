@@ -1,25 +1,23 @@
 import React from "react";
 import "./App.css";
 import Previewer from "./Previewer.jsx";
-import Terminal from "./Terminal.jsx";
-import ContentOfPreviewer from "./ContentOfPreviewer";
+import TextEditor from "./TextEditor.jsx";
 import { content } from "./content.js";
 
 export default function App() {
-  const [terminalContent, setTerminalContent] = React.useState(content);
-  
+  const [textEditorContent, setTextEditorContent] = React.useState(content);
 
   return (
     <main>
       <div className="row">
         <div className="col-6">
-          <Terminal
-            terminalContent={terminalContent}
-            setTerminalContent={setTerminalContent}
+          <TextEditor
+            textEditorContent={textEditorContent}
+            setTextEditorContent={setTextEditorContent}
           />
         </div>
         <div className="col-6">
-          <Previewer terminalContent={terminalContent} />
+          <Previewer textEditorContent={textEditorContent} />
         </div>
       </div>
     </main>
