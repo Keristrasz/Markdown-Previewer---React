@@ -5,7 +5,7 @@ import TextEditor from "./TextEditor.jsx";
 import { content } from "./content.js";
 
 export default function App() {
-  const [textEditorContent, setTextEditorContent] = React.useState(content);
+  const [textEditorContent, setTextEditorContent] = React.useState([content, marked.parse(content)]);
 
   return (
     <main>

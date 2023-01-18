@@ -1,20 +1,13 @@
 import React from "react";
 import "./App.css";
 
-export default function ContentOfPreviewer({ textEditorContent }) {
-  
-  function myGreeting() {
-    document.getElementById("content").innerHTML =
-      marked.parse(textEditorContent);
-      console.log("render")
-  }
-  const myTimeout = setTimeout(myGreeting, 100);
+export default function ContentOfPreviewer({ textEditorContent}) {
 
+  //Or we can use React.useRef hook, with setinnerHTML, its necessary to also use sanitizer  https://iq.js.org/questions/react/how-to-use-innerhtml-in-react
+  
   return (
     <div>
-      <div id="content">
-        {marked.parse(textEditorContent)}
-        {myTimeout}
+      <div dangerouslySetInnerHTML={{ __html: textEditorContent[1] }} id="content">
       </div>
     </div>
   );

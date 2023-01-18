@@ -2,9 +2,14 @@ import React from "react";
 import "./App.css";
 
 export default function TextEditor({ textEditorContent, setTextEditorContent }) {
-  function changeText(e) {
-    setTextEditorContent(e.target.value);
+
+  let changePreviewer = (e) => {
+
+    setTextEditorContent([e.target.value, marked.parse(e.target.value)])
   }
+
+
+
   return (
     <main>
       <div>
@@ -13,8 +18,8 @@ export default function TextEditor({ textEditorContent, setTextEditorContent }) 
         <textarea
           className="form-control"
           rows="33"
-          value={textEditorContent}
-          onChange={changeText}
+          value={textEditorContent[0]}
+          onChange={changePreviewer}
         ></textarea>
       </div>
     </main>

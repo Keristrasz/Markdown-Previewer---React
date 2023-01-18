@@ -1,4 +1,10 @@
-## Running React on Repl.it
+# Markdown Previewer in React on Replit
+
+Markdown Previewer in React. Type something with markdown, and you can see the view on the right side.
+
+## You can run this app (or check the code) on https://replit.com/@KarelJek/Markdown-Previewer-React#src/App.jsx
+
+### Running React on Repl.it
 
 [React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
 
